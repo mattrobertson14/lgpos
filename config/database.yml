@@ -1,0 +1,13 @@
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: lgpos_production
+  username: lgpos
+  password: <%= ENV['LGPOS_DATABASE_PASSWORD'] %>
+  pool: 5

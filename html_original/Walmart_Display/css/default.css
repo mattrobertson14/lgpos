@@ -1,0 +1,152 @@
+/* General Demo Style */
+body, html { font-size: 100%; 	padding: 0; margin: 0; font-family: Montserrat;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after {content: " "; display: table;}
+
+.clearfix:after {clear: both;}
+
+body {font-family: 'Lato', Montserrat, Calibri, Arial, sans-serif;}
+
+.icon-drop:before, 
+.icon-arrow-left:before {
+	font-family: 'fontawesome';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #47a3da;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+	padding-left: 8px;}
+.container > header nav a:hover:before {color: #fff;}
+.icon-drop:before {content: "\e000";}
+.icon-arrow-left:before {content: "\f060";}
+
+
+
+/* ----- COMPONENTS CSS -----*/
+@font-face {
+	font-family: 'entypo';
+	src:url('../fonts/controls/entypo.eot');
+	src:url('../fonts/controls/entypo.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/controls/entypo.woff') format('woff'),
+		url('../fonts/controls/entypo.ttf') format('truetype'),
+		url('../fonts/controls/entypo.svg#entypo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.cbp-bislideshow {list-style: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1; padding: 0; margin: 0;}
+.cbp-bislideshow li {position: absolute; width: 100%; height: 100%; top: -0.5%; /*left: -0.5%;*/ opacity: 0; -webkit-transition: opacity 1s; -moz-transition: opacity 1s; transition: opacity 1s;}
+
+/* If background-size supported we'll add the images to the background of the li */
+
+.backgroundsize .cbp-bislideshow li {-webkit-background-size: cover; -moz-background-size: cover; background-size: cover; background-position: center center;}
+
+/* ...and hide the images */
+.backgroundsize .cbp-bislideshow li img {display: none;}
+.cbp-bislideshow li img {display: block; width: 1024px; height: 768px;}
+.cbp-bicontrols {position: fixed; top: 52%; width: 100%;}
+.cbp-bicontrols span {float: left; width: 100px; height: 100px; position: relative; cursor: pointer;}
+.cbp-bicontrols span:before {position: absolute; width: 100%; height: 100%; top: 0; left: 0; text-align: center; font-family: 'entypo'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 100px; font-size: 80px; color: #fff; -webkit-font-smoothing: antialiased; opacity: 0.7;}
+.cbp-bicontrols span:hover:before {opacity: 1;}
+.cbp-bicontrols span:active:before {top: 2px;}
+span.cbp-biplay:before {content: "\e002";}
+span.cbp-bipause:before {content: "\e003"; display: none;}
+span.cbp-binext:before {content: "\e000";}
+span.cbp-biprev:before {content: "\e001";}
+.cbp-bicontrols span.cbp-biprev {float: left;}
+.cbp-bicontrols span.cbp-binext {float: right;}
+/* Fallback */
+.no-js.no-backgroundsize .cbp-bislideshow li:first-child {opacity: 1;}
+.no-js.backgroundsize .cbp-bislideshow li:first-child img {display: block;}
+
+.home_logo {width:349px; height: 258px; background: url(../images/home_logo.png) center center no-repeat; background-size: 100%; position: absolute; top: -43px; left: 50px; display: block;}
+.home_ask_scan_shop {width:209px; height: 218px; background: url(../images/home_ask_scan_shop_box.png) center center no-repeat; background-size: 100%; position: absolute; top: 30px; right: 22px; display: block;}
+.home_menu {position: fixed; bottom: 10px; display: block; width: 100%; text-align: center;}
+.home_menu img {max-width: 17%; height: auto; width: auto; margin: 0 3px;}
+.product_menu {float:left; display: block; width: 100%; text-align: center;}
+.product_menu img {max-width: 17%; height: auto; width: auto; margin: 0 3px;}
+.header div {display: inline;}
+.header {display: block; text-align: center; width: 100%; margin-bottom: 10px;}
+
+div.steps div {float: left;}
+.step_button {float:left; display: block; width: 100%; text-align: center;}
+div.product_swatches {display: inline;}
+/*#body-section {float:left; display: block; width: 100%; margin:15px 0; text-align: center; }*/
+
+.elite_logo img {height: auto; margin: 0; max-width: 34%; width: auto;}
+.product_ask_scan_shop img {height: auto; margin: 0 0 0 20px; max-width: 34%; width: auto;}
+.back_button img {height: auto; margin: 0 0 0 7px; max-width: 16%; width: auto;}
+.step_mid {margin: 5px 0;}
+.step_button img {height: auto; margin: 2% 0 2% 20%; max-width: 93%; width: auto;}
+
+.body-section {float:left; display: block; width: 100%; text-align: center; margin-bottom: 10px;}
+#scroll_box {height: auto; margin-right:1.0%; width: auto; overflow-x: scroll; overflow-y: hidden; white-space: nowrap; -webkit-overflow-scrolling: touch;}
+.product_size {height: auto; width: auto;}
+.product_size .swatch_button img {max-width: 21.4%;}
+.size_box_2048 {margin: 20px 0px;} 
+.size_box_2036,  .size_box_2048, .size_box_2072 {background-color: #007294; border: 1px solid #007294; font-weight: bold; border-radius: 6px; font-size: 1.7vw; display: block; color: #fff; width: auto; height: auto; display: inline-block; padding: 3.2%;}
+.size_box_2036 {min-width: 55%;}
+.size_box_2048 {min-width: 75%;}
+.size_box_2072 {min-width: 95%;}
+.size_box_2036:hover,  .size_box_2048:hover, .size_box_2072:hover {background-color: #E46F2A; border: 1px solid #a04d16; transition: background-color 0.3s ease; font-weight: bold; border-radius: 6px; display: block; color: #fff; width: auto; height: auto; display: inline-block;}
+.size_box_2036 div {display:inline-block; margin: 5% 0% 4% 0%;}
+.size_box_2048 div {display:inline-block; margin: 5% 0% 4% 0%;}
+.size_box_2072 div {display:inline-block; margin: 5% 0% 4% 0%;}
+.product_size div.sizes {display: inline-block; height: auto; max-width: 33%; width: auto; vertical-align: top; margin-top:5px;}
+.review_hero_box {margin-left: 10%;}
+.review_hero img {max-width: 50.5%;}
+.review_hero_text {font-size: 1.7vw; text-align: center; margin: 0.5% 7% 0 0; font-weight: bold;}
+.left {float: left; height: auto; margin: 0 13px 0 -24px; max-width: 42.6%; text-align: right; width: auto;}
+.right {display: block; text-align: left; height: auto; width: auto; max-width: 95.2%;}
+.center_area {height: auto; max-width: 102.6%; text-align: center; width: auto;}
+.left img {max-width:81%;}
+.center_area img {max-width:20%;}
+.center_area > img:hover {box-shadow: inset 0 0 0 16px rgba(255,255,255,0.6), 0 1px 2px rgba(0,0,0,0.1); transition: all 0.4s ease-in-out;}
+.help_me_decide_header img {max-width:88%;}
+.swatch_button {display: inline;}
+.swatch_button img {height: auto; width: auto; max-width: 33%; border: 5px solid #fff; box-shadow: inset 0 0 0 10px #e46f2a;}
+.swatch_button > img:hover {border: 5px solid #e46f2a; border-radius: 20px; transition:border-color 0.3s ease 0s;}
+.why_gelpro_header {color: #6d6e71; font-size: 4vw; margin: 0 0 1% 21%; text-align: left;}
+.why_gelpro_text {font-size: 1.6vw; color:#6d6e71; margin: 0 0 1% 21%; text-align: left;}
+.why_gelpro_box {margin-left: 10%;}
+.why_gelpro_hero img {max-width: 36%; margin-left: 19%;}
+.why_gelpro_elite_left {margin: 0 0 1% 21%; text-align: left;}
+.why_gelpro_elite_left img {max-width: 158%;}
+.barcode_box {background: url("../images/barcode_box.jpg") no-repeat scroll left top; background-size: 100% 100%; border: 0px solid #e46f2a; padding: 2%; border-radius: 10px; height: auto; margin: 1% 0 0% 21%; max-width: 79%; width: auto;}
+.barcode_box img {height: auto; max-width: 30%; width: auto; display: block; margin-left: 5% !important; padding: 12% 0 9% 0;}
+.barcodephone {font-size: 1.3vw; text-align: center; text-transform: uppercase;}
+.barcodedetails table.barcodedetails {float: left; margin: -32% 0 0 49%; text-transform: uppercase;}
+table.barcodedetails td.tblf {font-size: 1.1vw; text-align: right;}
+table.barcodedetails td.tbrt {font-size: 1.3vw; text-align: left; font-weight: bold; margin-left: 10%; display: block;}
+table.barcodedetails tbody tr td.tbrt {width: 100%;}
+
+
+/* Tiny Box Styles */
+.tbox {position:absolute; display:none; padding:14px 17px; z-index:900}
+.tinner {padding:15px; -moz-border-radius:5px; border-radius:5px; background:#fff url(../images/preload.gif) no-repeat 50% 50%; border-right:1px solid #333; border-bottom:1px solid #333}
+.tmask {position:absolute; display:none; top:0px; left:0px; height:100%; width:100%; background:#000; z-index:800}
+.tclose {position:absolute; top:0px; right:0px; width:30px; height:30px; cursor:pointer; background:url(../images/close.png) no-repeat}
+.tclose:hover {background-position:0 -30px}
+#error {background:#ff6969; color:#fff; text-shadow:1px 1px #cf5454; border-right:1px solid #000; border-bottom:1px solid #000; padding:0}
+#error .tcontent {padding:10px 14px 11px; border:1px solid #ffb8b8; -moz-border-radius:5px; border-radius:5px}
+#success {background:#2ea125; color:#fff; text-shadow:1px 1px #1b6116; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:0; border-radius:0}
+#bluemask {background:#4195aa}
+#frameless {padding:0}
+#frameless .tclose {left:6px}
+#testdiv {width:600px; margin:0px auto; border:1px solid #ccc; padding:20px 25px 12px; background:#fff}

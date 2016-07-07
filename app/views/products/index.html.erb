@@ -1,45 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Pattern</th>
-      <th>Name</th>
-      <th>Abbr</th>
-      <th>Description</th>
-      <th>Color</th>
-      <th>Size</th>
-      <th>Dimensions</th>
-      <th>Price</th>
-      <th>Sku</th>
-      <th>Netsuite</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.pattern %></td>
-        <td><%= product.name %></td>
-        <td><%= product.abbr %></td>
-        <td><%= product.description %></td>
-        <td><%= product.color %></td>
-        <td><%= product.size %></td>
-        <td><%= product.dimensions %></td>
-        <td><%= product.price %></td>
-        <td><%= product.sku %></td>
-        <td><%= product.netsuite_id %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+<div class='body-section'>
+  <div class='left' style='margin-right:70px;'>
+    <div class='barcode_box'>
+      <div class='barcodeimg'><%=image_tag("barcode.jpg")%></div>
+      <div class='barcodedetails'>
+        <table class='barcodedetails'>
+          <tbody>
+            <tr>
+              <td class='tblf'>Pattern</td>
+              <td class='tbrt'>Organic</td> <!-- To be replaced by dynamic code -->
+            </tr>
+            <tr>
+              <td class='tblf'>Color</td>
+              <td class='tbrt'>Acorn</td> <!-- To be replaced by dynamic code -->
+            </tr>
+            <tr>
+              <td class='tblf'>Size</td>
+              <td class='tbrt'>20" x 36"</td> <!-- To be replaced by dynamic code -->
+            </tr>
+            <tr>
+              <td class='tblf'>Price</td>
+              <td class='tbrt'>$119.95</td> <!-- To be replaced by dynamic code -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class='barcodephone'><b><a onclick="TINY.box.show({iframe:'number.html',width:325,height:177})" style='text-decoration: underline; font-weight: bold; cursor: pointer;'>Text this barcode to my phone</a></b><br>To be scanned and checked out</div>
+    </div>
+    <div class='step_button'><%=image_tag("step3_button_on.jpg")%></div>
+  </div>
+  <div class='right'>
+    <div class='review_hero_box'>
+      <a href='/patterns'><div class='review_hero'><%=image_tag("/assets/product/hero/elite/pos_elite_organic_acorn.jpg")%></div></a>
+    </div>
+    <div class='review_hero_text'>GelPro Elite&nbsp;|&nbsp;20" x 36"&nbsp;|&nbsp;Organic&nbsp;|&nbsp;Acorn</div>
+  </div>
+</div>

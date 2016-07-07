@@ -1,19 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 /* General Demo Style */
 body, html { font-size: 100%; 	padding: 0; margin: 0; font-family: Montserrat;}
 
@@ -144,7 +128,7 @@ div.product_swatches {display: inline;}
 .why_gelpro_hero img {max-width: 36%; margin-left: 19%;}
 .why_gelpro_elite_left {margin: 0 0 1% 21%; text-align: left;}
 .why_gelpro_elite_left img {max-width: 158%;}
-.barcode_box {background: url("barcode_box.jpg") no-repeat scroll left top; background-size: 100% 100%; border: 0px solid #e46f2a; padding: 2%; border-radius: 10px; height: auto; margin: 1% 0 0% 21%; max-width: 79%; width: auto;}
+.barcode_box {background: url("../images/barcode_box.jpg") no-repeat scroll left top; background-size: 100% 100%; border: 0px solid #e46f2a; padding: 2%; border-radius: 10px; height: auto; margin: 1% 0 0% 21%; max-width: 79%; width: auto;}
 .barcode_box img {height: auto; max-width: 30%; width: auto; display: block; margin-left: 5% !important; padding: 12% 0 9% 0;}
 .barcodephone {font-size: 1.3vw; text-align: center; text-transform: uppercase;}
 .barcodedetails table.barcodedetails {float: left; margin: -32% 0 0 49%; text-transform: uppercase;}

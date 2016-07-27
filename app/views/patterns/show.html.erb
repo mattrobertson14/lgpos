@@ -10,9 +10,11 @@
         <div class='swatch_button'><%=image_tag("/assets/product/swatch/#{@pattern.swatch}")%></div>
         <div class='sizes'>
           <% @products.each do |product| %>
-            <div class="size_box_<%= product.dimensions %>">
-              <%= link_to "#{product.size}", {:controller => 'products', :action => 'show', :id => product.id} %>
-            </div>
+            <a href="<%= product_path product %>">
+              <div class="size_box_<%= product.dimensions %>">
+                <div><%= product.size %><br />$<%= product.price %></div>
+              </div>
+            </a>
           <% end %>
         </div>
       </div>

@@ -116,11 +116,11 @@ div.product_swatches {display: inline;}
 .product_size {height: auto; width: auto;}
 .product_size .swatch_button img {max-width: 21.4%;}
 .size_box_2048 {margin: 20px 0px;} 
-.size_box_2036,  .size_box_2048, .size_box_2072 {background-color: #007294; border: 1px solid #007294; font-weight: bold; border-radius: 6px; font-size: 1.7vw; display: block; color: #fff; width: auto; height: auto; display: inline-block; padding: 3.2%;}
+.size_box_2036, .size_box_2048, .size_box_2072 {background-color: #007294; border: 1px solid #007294; font-weight: bold; border-radius: 6px; font-size: 1.7vw; display: block; color: #fff; width: auto; height: auto; display: inline-block; padding: 3.2%;}
 .size_box_2036 {min-width: 55%;}
 .size_box_2048 {min-width: 75%;}
 .size_box_2072 {min-width: 95%;}
-.size_box_2036:hover,  .size_box_2048:hover, .size_box_2072:hover {background-color: #E46F2A; border: 1px solid #a04d16; transition: background-color 0.3s ease; font-weight: bold; border-radius: 6px; display: block; color: #fff; width: auto; height: auto; display: inline-block;}
+.size_box_2036:hover, .size_box_2048:hover, .size_box_2072:hover {background-color: #E46F2A; border: 1px solid #a04d16; transition: background-color 0.3s ease; font-weight: bold; border-radius: 6px; display: block; color: #fff; width: auto; height: auto; display: inline-block;}
 .size_box_2036 div {display:inline-block; margin: 5% 0% 4% 0%;}
 .size_box_2048 div {display:inline-block; margin: 5% 0% 4% 0%;}
 .size_box_2072 div {display:inline-block; margin: 5% 0% 4% 0%;}

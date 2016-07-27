@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20160727095832) do
     t.integer  "netsuite_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "pattern"
     t.string   "pattern_name"
     t.string   "photo"
   end

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pages/help_me_decide'
+  get 'pages/help_me_decide_elite'
+
   resources :products
   resources :patterns
   resources :product_lines

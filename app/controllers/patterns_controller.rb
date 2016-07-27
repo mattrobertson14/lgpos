@@ -10,6 +10,7 @@ class PatternsController < ApplicationController
   # GET /patterns/1
   # GET /patterns/1.json
   def show
+    @products = Pattern.find(params[:id]).products
   end
 
   # GET /patterns/new

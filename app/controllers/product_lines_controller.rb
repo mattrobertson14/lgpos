@@ -5,11 +5,14 @@ class ProductLinesController < ApplicationController
   # GET /product_lines.json
   def index
     @product_lines = ProductLine.all
+    @patterns = ProductLine.first.patterns
   end
 
   # GET /product_lines/1
   # GET /product_lines/1.json
   def show
+    @product_lines = ProductLine.all
+    @patterns = ProductLine.first.patterns
   end
 
   # GET /product_lines/new

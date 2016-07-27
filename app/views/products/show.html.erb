@@ -1,54 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Pattern:</strong>
-  <%= @product.pattern.name %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Abbr:</strong>
-  <%= @product.abbr %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @product.color %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @product.size %>
-</p>
-
-<p>
-  <strong>Dimensions:</strong>
-  <%= @product.dimensions %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Sku:</strong>
-  <%= @product.sku %>
-</p>
-
-<p>
-  <strong>Netsuite:</strong>
-  <%= @product.netsuite_id %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class='body-section'>
+  <div class='left' style='margin-right:70px;'>
+    <div class='barcode_box'>
+      <div class='barcodeimg'><%=image_tag("barcode.jpg")%></div>
+      <div class='barcodedetails'>
+        <table class='barcodedetails'>
+          <tbody>
+            <tr>
+              <td class='tblf'>Pattern</td>
+              <td class='tbrt'><%= @product.pattern_name %></td> <!-- To be replaced by dynamic code -->
+            </tr>
+            <tr>
+              <td class='tblf'>Color</td>
+              <td class='tbrt'><%= @product.color %></td> <!-- To be replaced by dynamic code -->
+            </tr>
+            <tr>
+              <td class='tblf'>Size</td>
+              <td class='tbrt'><%= @product.size %></td> <!-- To be replaced by dynamic code -->
+            </tr>
+            <tr>
+              <td class='tblf'>Price</td>
+              <td class='tbrt'>$<%= @product.price %></td> <!-- To be replaced by dynamic code -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class='barcodephone'><b><a onclick="TINY.box.show({iframe:'number.html',width:325,height:177})" style='text-decoration: underline; font-weight: bold; cursor: pointer;'>Text this barcode to my phone</a></b><br>To be scanned and checked out</div>
+    </div>
+    <div class='step_button'><%=image_tag("step3_button_on.jpg")%></div>
+  </div>
+  <div class='right'>
+    <div class='review_hero_box'>
+      <div class='review_hero'><%=image_tag("/assets/product/hero/elite/#{@product.photo}")%></div>
+    </div>
+    <div class='review_hero_text'><%= @product.name %></div>
+  </div>
+</div>

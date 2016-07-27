@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625034719) do
+ActiveRecord::Schema.define(version: 20160727095832) do
 
   create_table "patterns", force: :cascade do |t|
     t.integer  "product_line_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160625034719) do
     t.text     "description"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "swatch"
   end
 
   add_index "patterns", ["abbr"], name: "index_patterns_on_abbr"
@@ -48,8 +49,11 @@ ActiveRecord::Schema.define(version: 20160625034719) do
     t.decimal  "price"
     t.string   "sku"
     t.integer  "netsuite_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "pattern"
+    t.string   "pattern_name"
+    t.string   "photo"
   end
 
   add_index "products", ["abbr"], name: "index_products_on_abbr"

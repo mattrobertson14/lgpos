@@ -1,18 +1,7 @@
 
 <div id="scroll_box"> 
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_organic_acorn.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_organic_autumn_leaf.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_organic_blue_mist.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_organic_morning_dusk.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_organic_mushroom.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_olivia_autumn_laze.jpg")%></div></a> <!-- change back to autumn_blaze when the file is changed -->
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_olivia_barrel_brown.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_olivia_carob.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_olivia_deep_sea.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_olivia_ink_well.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_confetti_chocolate.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_confetti_coastal_haze.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_confetti_flame.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_confetti_golden_pear.jpg")%></div></a>
-<a href="/patterns"><div class="swatch_button"><%=image_tag("/assets/product/swatch/pos_swatch_confetti_sea_glass.jpg")%></div></a>
+<% @patterns.each do |pattern| %>
+	<div class="swatch_button"><%= link_to image_tag("/assets/product/swatch/#{pattern.swatch}"), {:controller => 'patterns', :action => 'show', :id => pattern.id} %></div>
+<% end %>
+
 </div>

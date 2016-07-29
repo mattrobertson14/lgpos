@@ -1,7 +1,7 @@
 
 <div id="scroll_box"> 
 <% @patterns.each do |pattern| %>
-	<div class="swatch_button"><%= link_to image_tag("product/swatch/#{pattern.swatch}"), {:controller => 'patterns', :action => 'show', :id => pattern.id} %></div>
+	<div class="swatch_button"><%= link_to image_tag(pattern.swatch), {:controller => 'patterns', :action => 'show', :id => pattern.id} %></div>
 <% end %>
 
 </div>

@@ -7,7 +7,7 @@
     </div>
     <div class="right">
       <div class='product_size'>
-        <div class='swatch_button'><%=image_tag("product/swatch/#{@pattern.swatch}")%></div>
+        <div class='swatch_button'><%=image_tag(@pattern.swatch)%></div>
         <div class='sizes'>
           <% @products.each do |product| %>
             <a href="<%= product_path product %>">

@@ -6,13 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ProductLine.destroy_all
+# ProductLine.destroy_all
 classic = ProductLine.create(name: 'GelPro Classic', abbr: 'classic')
 dcm = ProductLine.create(name: 'Designer Comfort Mat', abbr: 'dcm')
 elite = ProductLine.create(name: 'GelPro Elite', abbr: 'elite')
 newlife = ProductLine.create(name: 'NewLife Professional Grade', abbr: 'newlife')
 
-Pattern.destroy_all
+# Pattern.destroy_all
 classic_basketweave_black = Pattern.create(product_line_id: classic.id, name: 'Basketweave: Black', swatch: 'product/swatch/pos_swatch_basketweave_black.jpg')
 classic_basketweave_black = Pattern.create(product_line_id: classic.id, name: 'Basketweave: Black', swatch: 'product/swatch/pos_swatch_basketweave_black.jpg')
 classic_basketweave_black = Pattern.create(product_line_id: classic.id, name: 'Basketweave: Black', swatch: 'product/swatch/pos_swatch_basketweave_black.jpg')
@@ -1386,7 +1386,7 @@ newlife_quatrefoil_stone_slate_grey = Pattern.create(product_line_id: newlife.id
 newlife_quatrefoil_stone_slate_grey = Pattern.create(product_line_id: newlife.id, name: 'Quatrefoil: Stone/Slate Grey', swatch: 'product/swatch/pos_swatch_quatrefoil_stone_slate_grey.jpg')
 newlife_quatrefoil_stone_slate_grey = Pattern.create(product_line_id: newlife.id, name: 'Quatrefoil: Stone/Slate Grey', swatch: 'product/swatch/pos_swatch_quatrefoil_stone_slate_grey.jpg')
 
-Product.destroy_all
+# Product.destroy_all
 Product.create(pattern_id: classic_basketweave_black.id, name: 'GelPro Basketweave Black 20x36', pattern_name: 'Basketweave', color: 'Black', size: '20" x 36"', dimensions: '2036', price: 99.95, sku: 'NEW-SA-1-13-2036-1', netsuite_id: 51754, photo: 'product/hero/classic/pos_classic_basketweave_black.jpg')
 Product.create(pattern_id: classic_basketweave_black.id, name: 'GelPro Basketweave Black 20x48', pattern_name: 'Basketweave', color: 'Black', size: '20" x 48"', dimensions: '2048', price: 134.95, sku: 'NEW-SA-1-13-2048-1', netsuite_id: 51755, photo: 'product/hero/classic/pos_classic_basketweave_black.jpg')
 Product.create(pattern_id: classic_basketweave_black.id, name: 'GelPro Basketweave Black 20x72', pattern_name: 'Basketweave', color: 'Black', size: '20" x 72"', dimensions: '2072', price: 199.95, sku: 'NEW-SA-1-13-2072-1', netsuite_id: 51756, photo: 'product/hero/classic/pos_classic_basketweave_black.jpg')
